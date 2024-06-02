@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
     },
     labelView: {
         justifyContent: 'center',
-        paddingHorizontal: 7,
+        padding: 2,
+        marginBottom: 5,
         height: 0
     },
     label: {
@@ -75,9 +76,8 @@ const styles = StyleSheet.create({
         padding: 2
     },
     mainTextView: {
-        margin: 0,
         zIndex: 1,
-        padding: 3
+        padding: 4
     },
     mainText: {
         fontSize: 11
