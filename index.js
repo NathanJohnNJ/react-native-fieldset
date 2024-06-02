@@ -4,21 +4,21 @@ import PropTypes from 'prop-types'
 
 export default class FieldSet extends Component {
 
-    render(props) {
-        let alignItems = props.labelPosition == 'center' ? 'center' : 'flex-' + props.labelPosition
-        if (props.twoLabel) {
+    render() {
+        let alignItems = this.props.labelPosition == 'center' ? 'center' : 'flex-' + this.props.labelPosition
+        if (this.props.twoLabel) {
             alignItems = 'space-between'
         }
         return (
-            <View style={[styles(props).container, { borderColor: props.borderColor }]}>
-                <View style={[styles(props).labelView, { alignItems }, props.twoLabel ? { alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between' } : {}]}>
-                    <Text style={[styles(props).label, { backgroundColor: props.labelBackgroundColor, color: props.labelColor, fontSize: props.labelFontSize }, props.labelStyle]}> {props.label} </Text>
-                    {props.twoLabel && <Text style={[styles(props).label, { backgroundColor: props.labelBackgroundColor, color: props.labelColor, fontSize: props.labelFontSize }, props.labelStyle, props.labelStyle2]}> {props.label2} </Text>}
+            <View style={[styles.container, { borderColor: this.props.borderColor }]}>
+                <View style={[styles.labelView, { alignItems }, this.props.twoLabel ? { alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between' } : {}]}>
+                    <Text style={[styles.label, { backgroundColor: this.props.labelBackgroundColor, color: this.props.labelColor, fontSize: this.props.labelFontSize }, this.props.labelStyle]}> {this.props.label} </Text>
+                    {this.props.twoLabel && <Text style={[styles.label, { backgroundColor: this.props.labelBackgroundColor, color: this.props.labelColor, fontSize: this.props.labelFontSize }, this.props.labelStyle, this.props.labelStyle2]}> {this.props.label2} </Text>}
                 </View>
                 <View style={{ flex: 1, justifyContent: 'center' }}>
-                    <View style={styles(props).mainTextView}>
-                        <Text style={[styles(props).mainText, props.mainTextStyle]}>
-                            {props.children}
+                    <View style={styles.mainTextView}>
+                        <Text style={[styles.mainText, this.props.mainTextStyle]}>
+                            {this.props.children}
                         </Text>
                     </View>
                 </View>
@@ -57,11 +57,11 @@ FieldSet.defaultProps = {
     mainTextStyle: {}
 }
 
-const styles = (props) => StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
-        borderWidth: 1.5,
         borderRadius: 12,
-        border: `1.5 solid ${props.borderColor}`,
+        border: `1.5 solid #777`,
+        margin: 5,
         marginTop: 10,
     },
     labelView: {
