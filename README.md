@@ -2,7 +2,7 @@
 
 ## Installation
 ```
-npm install react-native-fieldset
+npm install @njtd/react-native-fieldset
 ```
 ## Usage: 
 ```javascript
