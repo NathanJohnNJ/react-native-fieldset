@@ -1,6 +1,6 @@
 {
   "name": "@njtd/react-native-fieldset",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React Native component that resembles a html fieldset.",
   "main": "index.js",
   "scripts": {
