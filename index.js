@@ -5,20 +5,20 @@ import PropTypes from 'prop-types'
 export default class FieldSet extends Component {
 
     render(props) {
-        let alignItems = this.props.labelPosition == 'center' ? 'center' : 'flex-' + this.props.labelPosition
-        if (this.props.twoLabel) {
+        let alignItems = props.labelPosition == 'center' ? 'center' : 'flex-' + props.labelPosition
+        if (props.twoLabel) {
             alignItems = 'space-between'
         }
         return (
-            <View style={[styles(props).container, { borderColor: this.props.borderColor }]}>
-                <View style={[styles(props).labelView, { alignItems }, this.props.twoLabel ? { alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between' } : {}]}>
-                    <Text style={[styles(props).label, { backgroundColor: this.props.labelBackgroundColor, color: this.props.labelColor, fontSize: this.props.labelFontSize }, this.props.labelStyle]}> {this.props.label} </Text>
-                    {this.props.twoLabel && <Text style={[styles(props).label, { backgroundColor: this.props.labelBackgroundColor, color: this.props.labelColor, fontSize: this.props.labelFontSize }, this.props.labelStyle, this.props.labelStyle2]}> {this.props.label2} </Text>}
+            <View style={[styles(props).container, { borderColor: props.borderColor }]}>
+                <View style={[styles(props).labelView, { alignItems }, props.twoLabel ? { alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between' } : {}]}>
+                    <Text style={[styles(props).label, { backgroundColor: props.labelBackgroundColor, color: props.labelColor, fontSize: props.labelFontSize }, props.labelStyle]}> {props.label} </Text>
+                    {props.twoLabel && <Text style={[styles(props).label, { backgroundColor: props.labelBackgroundColor, color: props.labelColor, fontSize: props.labelFontSize }, props.labelStyle, props.labelStyle2]}> {props.label2} </Text>}
                 </View>
                 <View style={{ flex: 1, justifyContent: 'center' }}>
                     <View style={styles(props).mainTextView}>
-                        <Text style={[styles(props).mainText, this.props.mainTextStyle]}>
-                            {this.props.children}
+                        <Text style={[styles(props).mainText, props.mainTextStyle]}>
+                            {props.children}
                         </Text>
                     </View>
                 </View>
