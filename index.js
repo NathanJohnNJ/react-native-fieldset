@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export default class FieldSet extends Component {
 
-    render() {
+    render(props) {
         let alignItems = this.props.labelPosition == 'center' ? 'center' : 'flex-' + this.props.labelPosition
         if (this.props.twoLabel) {
             alignItems = 'space-between'
