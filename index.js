@@ -67,17 +67,17 @@ const styles = StyleSheet.create({
     },
     labelView: {
         justifyContent: 'center',
+        paddingHorizontal: 7,
+        height: 0
     },
     label: {
-        elevation: 1000,
         borderRadius: 12,
         padding: 2
     },
     mainTextView: {
         margin: 0,
         zIndex: 1,
-        paddingTop: 1,
-        paddingBottom: 1,
+        padding: 3
     },
     mainText: {
         fontSize: 11
