@@ -60,7 +60,8 @@ FieldSet.defaultProps = {
 const styles = StyleSheet.create({
     container: {
         borderRadius: 12,
-        border: `1.5 solid #777`,
+        borderWidth: 1.5,
+        borderStyle: 'solid',
         margin: 5,
         marginTop: 10,
     },
