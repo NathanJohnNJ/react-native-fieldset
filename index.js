@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     },
     label: {
         borderRadius: 12,
-        padding: 2
+        paddingVertical: 2
     },
     mainTextView: {
         zIndex: 1,
