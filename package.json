@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/NathanJohnNJ/react-native-fieldset/issues"
   },
-  "homepage": "https://github.com/NathanJohnNJ/react-native-fieldset#readme"
+  "homepage": "https://github.com/NathanJohnNJ/react-native-fieldset#readme",
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-native": "^0.75.0"
+  }
 }
